@@ -1,0 +1,238 @@
+.career-container {
+  min-height: 100vh;
+  padding: 50px 20px;
+  background-color: #f5e6ff;
+  display: flex;
+  flex-direction: column; /* Default stacked layout for mobile */
+  align-items: center;
+  justify-content: center;
+
+  /* Tablet/iPad View */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    flex-direction: row; /* Side-by-side layout for iPad */
+    padding: 40px 40px; /* Adjust padding for iPad */
+    gap: 20px; /* Add spacing between items */
+  }
+
+  /* Desktop View */
+  @media (min-width: 1025px) {
+    flex-direction: row;
+    padding: 50px 90px;
+  }
+}
+
+.career-text {
+  text-align: center; /* Default for mobile */
+  padding: 20px;
+
+  /* Tablet/iPad View */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    text-align: left;
+    padding: 0 20px; /* Adjust padding for iPad */
+    flex: 1; /* Equal space allocation with the image */
+  }
+
+  /* Desktop View */
+  @media (min-width: 1025px) {
+    text-align: left;
+    padding-left: 90px;
+  }
+
+  h1 {
+    font-size: 2.5rem; /* Default for mobile */
+    margin-bottom: 15px;
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      font-size: 3.5rem; /* Adjust size for iPad */
+    }
+
+    @media (min-width: 1025px) {
+      font-size: 5rem; /* Original size for desktop */
+    }
+  }
+
+  p {
+    font-size: 1.2rem; /* Default for mobile */
+    line-height: 1.4;
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      font-size: 1.5rem; /* Increase size for iPad */
+      line-height: 1.6;
+    }
+
+    @media (min-width: 1025px) {
+      font-size: 1.7rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+.career-image {
+  width: 100%; /* Full width for mobile */
+  max-width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+
+  /* Tablet/iPad View */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    max-width: 50%; /* Adjust image width for iPad */
+    margin-top: 0;
+  }
+
+  /* Desktop View */
+  @media (min-width: 1025px) {
+    max-width: 55%; /* Original size for desktop */
+  }
+}
+
+
+.tech-proficiency {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+.careerh2 {
+  padding: 15px 30px; /* Padding inside the box */
+  background-color: #ffffff; /* White background for the box */
+  border-radius: 50px; /* Rounded corners */
+  border: 5px solid #d1c4e9; /* Light purple border */
+  display: inline-block; /* Fit the box tightly around the text */
+  font-size: 2rem; /* Adjust font size */
+  text-align: center; /* Center-align text within the box */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  color: #333; /* Text color */
+}
+.tech-proficiency p
+{
+  font-size: 1.5rem;
+}
+//
+.recruitment-section {
+  text-align: center;
+  background-color: #3b3486;
+  color: white;
+  padding: 2.5rem;
+}
+
+.recruitment-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.recruitment-section .description {
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: linear-gradient(135deg, #e94f37, #7f5af0);
+  border-radius: 2rem 0 2rem 0; /* Top-left and bottom-right rounded */
+  width: 320px; /* Increased width */
+  padding: 2rem; /* Increased padding */
+  color: white;
+  text-align: left;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.card .icon img {
+  width: 50px; /* Larger icon size */
+  margin-bottom: 1.5rem;
+}
+
+.card h3 {
+  font-size: 1.4rem; /* Increased heading size */
+  margin-bottom: 0.8rem;
+}
+
+.card p {
+  font-size: 1rem; /* Slightly larger font */
+  line-height: 1.6;
+}
+.current-openings-section {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 3rem 2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.openings-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem; /* Adjust gap here */
+  justify-content: space-evenly; /* Add spacing between items */
+}
+
+
+.opening-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth effect */
+}
+
+.opening-card .icon img {
+  width: 50px; /* Icon size */
+  margin-bottom: 1rem;
+}
+
+.opening-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.opening-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.apply-btn {
+  background-color: #007bff; /* Blue button */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+.opening-card:hover {
+  background: #f5e6ff; /* Light blue background on hover */
+  transform: scale(1.03); /* Slightly enlarge the card */
+}
+@media (max-width: 768px) {
+  .openings-container {
+    grid-template-columns: 1fr; /* One card per row on smaller screens */
+  }
+}
+
+

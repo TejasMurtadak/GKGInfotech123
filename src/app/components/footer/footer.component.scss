@@ -1,0 +1,32 @@
+footer {
+  border-top: 1px solid #444; /* Optional border at the top of the footer */
+  font-size: 20px;
+}
+
+footer h5 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+footer ul {
+  padding-left: 0;
+}
+
+footer li {
+  margin-bottom: 8px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #4CAF50; /* Green color on hover */
+}
+
+/* footer.component.css */
+img {
+  width: 150px; /* Adjust width as needed */
+  height: auto;
+}
+
+.cont {
+  padding-top: 30px;
+}

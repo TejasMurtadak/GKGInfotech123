@@ -1,0 +1,620 @@
+/* Responsive and scalable layout */
+.hero-section
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: url("/frontbackground.jpg")no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 20px;
+  color: white;
+}
+
+.content {
+  max-width: 50%;
+  flex: 1;
+  padding-left: 90px;
+}
+
+.content h1 {
+  font-size: 4em;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.get-quote-btn {
+  background-color: #ffca28;
+  color: rgba(102,76,150,1);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  //margin-left: 30px;
+}
+
+.get-quote-btn:hover {
+  background-color: #ffc107;
+}
+
+.image-container {
+  max-width: 50%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foreground-image {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .image-container {
+    max-width: 100%;
+  }
+
+  .content h1 {
+    font-size: 2em;
+  }
+
+  .content p {
+    font-size: 1em;
+  }
+
+  .get-quote-btn {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+}
+/* home.component.css */
+.hero-section {
+  display: flex;
+}
+// //body {
+//   font-family: Arial, sans-serif;
+//   background-color: #f9f9f9;
+// }
+.divv{
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding-top: 25px;
+  justify-content: center;
+}.devv{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+/* Style for the custom card */
+/* Style for the custom card */
+/* Unique card styling */
+.unique-card {
+  border: 1px solid #e0e0e0; /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Ensure content is centered */
+  padding: 1.5rem; /* Add padding inside the card */
+  overflow: hidden; /* Prevent content from spilling outside */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.unique-card:hover {
+  transform: translateY(-5px); /* Slightly lift on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Icon wrapper styling */
+.unique-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px; /* Fixed height for centering */
+  margin-bottom: 1rem;
+}
+
+/* Icon image styling */
+.unique-icon {
+  width: 80px; /* Set a fixed width for the image */
+  height: 80px; /* Set a fixed height for the image */
+  object-fit: contain; /* Maintain aspect ratio */
+  border-radius: 50%; /* Circular image */
+  padding: 5px; /* Space around the image */
+}
+
+/* Card title styling */
+.unique-card-title {
+  font-size: 1.2rem;
+  color: #333333; /* Dark text color */
+  font-weight: 600;
+}
+
+/* Heading styling */
+.heading-text {
+  font-weight: bold;
+  color: rgba(102, 76, 150, 1); /* Purple color */
+  font-size: 3.3rem;
+}
+
+/* Paragraph text styling */
+.paragraph-text {
+  font-size: 1.5rem;
+}
+
+/* Resetting default margins and paddings */
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+
+/* Resetting default margins and paddings */
+/* Reset and global styles */
+/* Reset and global styles */
+
+/* Full wrapper containing the image and text */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+/* Background image styling */
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes the image cover the container */
+}
+
+/* Text styling (aligned to the right side) */
+.text-overlay {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  right: 5%; /* Position text on the right side */
+  transform: translateY(-50%);
+  max-width: 40%;
+  color: #000; /* White text for contrast */
+  text-align: left;
+}
+
+.text-overlay h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.text-overlay p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Link styling */
+.view-process {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #300E4C;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+/* Buttons styling */
+.buttons {
+  margin-top: 1.5rem;
+}
+
+.buttons button {
+  padding: 0.8rem 1.5rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+
+}
+
+.buttons button:nth-child(1) {
+  background-color: #300E4C; /* Blue button */
+}
+
+.buttons button:nth-child(2) {
+  background-color: #300E4C /* Green button */
+}
+
+
+/* Specific styles for the .digital-marketing-container */
+.digital-marketing-container {
+  position: relative;
+  width: 100%;
+  // height: 100vh;
+  overflow: hidden;
+  //padding-bottom: 20px;
+}
+
+.digital-marketing-container .background-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.digital-marketing-container .text-left-overlay {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  max-width: 40%;
+  color: #000;
+}
+
+.digital-marketing-container .text-left-overlay h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.digital-marketing-container .text-left-overlay p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.digital-marketing-container .left-view-process {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #300E4C;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+.digital-marketing-container .left-buttons {
+  margin-top: 1.5rem;
+}
+
+.digital-marketing-container .left-buttons button {
+  padding: 0.8rem 1.5rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.digital-marketing-container .left-buttons button:nth-child(1) {
+  background-color: #300E4C;
+}
+
+.digital-marketing-container .left-buttons button:nth-child(2) {
+  background-color: #300E4C;
+}
+/* Full wrapper for the new container */
+.new-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.new-background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.new-text-overlay {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translateY(-50%);
+  max-width: 50%;
+  color: #333; /* Darker text for better readability */
+  text-align: left;
+}
+
+.new-text-overlay h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #000; /* Black text for heading */
+}
+
+.new-text-overlay p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #444; /* Slightly lighter text for paragraph */
+}
+
+.new-view-process {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #007bff;
+  text-decoration: underline;
+  font-size: 1.1rem;
+}
+
+.new-buttons {
+  margin-top: 2rem;
+}
+
+.new-buttons button {
+  padding: 0.8rem 2rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.new-buttons button:nth-child(1) {
+  background-color: #300E4C; /* Blue button */
+}
+
+.new-buttons button:nth-child(2) {
+  background-color: #300E4C; /* Green button */
+}
+
+.new-buttons button:nth-child(3) {
+  background-color: #300E4C; /* Orange button */
+}
+
+
+//
+/* Technology Proficiency Section */
+.tech-proficiency {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.tech-proficiency h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #300E4c;
+}
+
+.tech-proficiency p {
+  font-size: 1.8rem;
+  color: #300E4c;
+  margin-bottom: 2rem;
+
+}
+
+/* Tab Menu */
+.tab-menu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.tab-menu .tab {
+  padding: 0.8rem 1.5rem;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tab-menu .tab:hover,
+.tab-menu .tab.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Technology Cards */
+.tech-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.tech-card {
+  width: 150px; /* Increased width of the card */
+  padding: 1.5rem; /* Increased padding */
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.tech-card:hover {
+  transform: scale(1.1);
+}
+
+.tech-card img {
+  width: 70px; /* Increased width of the image */
+  height: 70px; /* Increased height of the image */
+  margin-bottom: 0.7rem; /* Added more space below the image */
+}
+
+.tech-card p {
+  font-size: 1.1rem; /* Slightly increased font size */
+  color: #333;
+  font-weight: bold;
+}
+
+
+.tech-card img {
+  width: 100px;
+  height: 75px;
+  margin-bottom: 0.5rem;
+}
+
+.tech-card p {
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+//
+
+.homepage-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding-top: 15px;
+  padding-left: 200px;
+}
+.image-section {
+  flex: 1;
+}
+.homepage-image {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 8px;
+}
+.categories-section {
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding-right: 300px;
+  font-weight:bolder;
+  color: #664C96;
+}
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+
+}
+.category-item i {
+  font-size: 24px; /* Icon size */
+  color: #6c757d; /* Neutral color for icons */
+}
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.sports-icon { background-image: url('/Sports.png'); }
+.real-estate-icon { background-image: url('/realestate.png'); }
+.food-icon { background-image: url('/food.png'); }
+.architecture-icon { background-image: url('/arch.png'); }
+.tech-icon { background-image: url('/tech.png'); }
+.hospitality-icon { background-image: url('/hospitality.png'); }
+.education-icon { background-image: url('/edu.png'); }
+.travel-icon { background-image: url('/travel.png'); }
+.ecommerce-icon { background-image: url('/ecomerce.png'); }
+.healthcare-icon { background-image: url('/health.png'); }
+.fashion-icon { background-image: url('/fashion.png'); }
+.finance-icon { background-image: url('/Ivestment.png'); }
+.pets-icon { background-image: url('/pets.png'); }
+.automotive-icon { background-image: url('/automotive.png'); }
+/* Rectangle 92 */
+
+
+//POPup design
+button {
+  padding: 10px 20px;
+  background: #6a1b9a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4a148c;
+}
+
+.popup {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content
+{
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.popup-content .close
+{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+form input,
+form select,
+form textarea,
+form button
+{
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button
+{
+  background: #6a1b9a;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+form button:hover
+{
+  background: #4a148c;
+}
+
+.error
+{
+  color: red;
+  font-size: 0.8rem;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+

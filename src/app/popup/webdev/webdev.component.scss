@@ -1,0 +1,20 @@
+.example-accordion {
+  margin: 20px 0;
+}
+
+mat-panel-title b {
+  font-size: 16px;
+}
+
+mat-dialog-content {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+h2[mat-dialog-title] img {
+  margin-bottom: 20px;
+}
+
+mat-dialog-actions {
+  margin-top: 20px;
+}

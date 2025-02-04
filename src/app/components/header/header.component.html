@@ -1,0 +1,36 @@
+<header class="bg-dark text-light">
+  <div class="container-fluid d-flex align-items-center py-2 ">
+    <!-- Logo Section -->
+    <div class="d-flex align-items-center me-auto">
+      <div class="logo">
+        <img src="/gkglogo.png" alt="GKG Logo" class="img-fluid logo-img" style="height: 100px;"> <!-- Increased height -->
+      </div>
+    </div>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item ms-4">
+            <a class="nav-link text-warning" routerLink="" routerLinkActive="active text-dark-warning" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+          </li>
+          <li class="nav-item ms-4">
+            <a class="nav-link text-warning" routerLink="services" routerLinkActive="active text-dark-warning">Services</a>
+          </li>
+          <li class="nav-item ms-4">
+            <a class="nav-link text-warning" routerLink="about-us" routerLinkActive="active text-dark-warning">About Us</a>
+          </li>
+          <li class="nav-item ms-4">
+            <a class="nav-link text-warning" routerLink="contact-us" routerLinkActive="active text-dark-warning">Contact Us</a>
+          </li>
+          <li class="nav-item ms-4">
+            <a class="nav-link text-warning" routerLink="career" routerLinkActive="active text-dark-warning">Career</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>

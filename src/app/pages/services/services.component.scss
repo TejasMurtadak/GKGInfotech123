@@ -1,0 +1,266 @@
+.service-container {
+  min-height: 100vh; /* Full height for the container */
+  padding: 50px 0;
+  background-color: #f5e6ff; /* Light purple background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-text {
+  text-align: left;
+  padding-left: 90px;
+}
+
+.service-text h1 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.service-text p {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.service-image {
+  max-width: 55%;
+  border-radius: 10px;
+}
+.tech-proficiency {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+h2 {
+  padding: 15px 30px; /* Padding inside the box */
+  background-color: #ffffff; /* White background for the box */
+  border-radius: 50px; /* Rounded corners */
+  border: 5px solid #d1c4e9; /* Light purple border */
+  display: inline-block; /* Fit the box tightly around the text */
+  font-size: 2rem; /* Adjust font size */
+  text-align: center; /* Center-align text within the box */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  color: #333; /* Text color */
+}
+.tech-proficiency p
+{
+  font-size: 1.5rem;
+}
+//
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full wrapper containing the image and text */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+/* Background image styling */
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes the image cover the container */
+}
+
+/* Text styling (aligned to the right side) */
+.text-overlay {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  right: 5%; /* Position text on the right side */
+  transform: translateY(-50%);
+  max-width: 40%;
+  color: #000; /* White text for contrast */
+  text-align: left;
+}
+
+.text-overlay h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.text-overlay p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Link styling */
+.view-process {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #007bff;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+/* Buttons styling */
+.buttons {
+  margin-top: 1.5rem;
+}
+
+.buttons button {
+  padding: 0.8rem 1.5rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  cursor: pointer;
+}
+
+.buttons button:nth-child(1) {
+  background-color: #007bff; /* Blue button */
+}
+
+.buttons button:nth-child(2) {
+  background-color: #28a745; /* Green button */
+}
+
+
+/* Specific styles for the .digital-marketing-container */
+.digital-marketing-container {
+  position: relative;
+  width: 100%;
+  // height: 100vh;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+.digital-marketing-container .background-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.digital-marketing-container .text-left-overlay {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  max-width: 40%;
+  color: #000;
+}
+
+.digital-marketing-container .text-left-overlay h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.digital-marketing-container .text-left-overlay p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.digital-marketing-container .left-view-process {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #007bff;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+.digital-marketing-container .left-buttons {
+  margin-top: 1.5rem;
+}
+
+.digital-marketing-container .left-buttons button {
+  padding: 0.8rem 1.5rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.digital-marketing-container .left-buttons button:nth-child(1) {
+  background-color: #007bff;
+}
+
+.digital-marketing-container .left-buttons button:nth-child(2) {
+  background-color: #28a745;
+}
+/* Full wrapper for the new container */
+.new-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.new-background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.new-text-overlay {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translateY(-50%);
+  max-width: 50%;
+  color: #333; /* Darker text for better readability */
+  text-align: left;
+}
+
+.new-text-overlay h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #000; /* Black text for heading */
+}
+
+.new-text-overlay p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #444; /* Slightly lighter text for paragraph */
+}
+
+.new-view-process {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #007bff;
+  text-decoration: underline;
+  font-size: 1.1rem;
+}
+
+.new-buttons {
+  margin-top: 2rem;
+}
+
+.new-buttons button {
+  padding: 0.8rem 2rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.new-buttons button:nth-child(1) {
+  background-color: #007bff; /* Blue button */
+}
+
+.new-buttons button:nth-child(2) {
+  background-color: #28a745; /* Green button */
+}
+
+.new-buttons button:nth-child(3) {
+  background-color: #ff5722; /* Orange button */
+}

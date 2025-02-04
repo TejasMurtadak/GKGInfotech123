@@ -1,0 +1,39 @@
+.text-dark-warning {
+  color: darkgoldenrod !important;
+}
+
+header.bg-dark {
+  background-color: rgb(47, 14, 75) !important;
+  height: 150px; /* Header height */
+}
+
+.navbar-nav {
+  //margin-right: 0; /* Removed extra margin-right */
+  margin-right: 285px;
+  margin-top:35px ;
+  font-size:30px;
+}
+
+.navbar-nav .nav-link {
+  color: rgb(255, 193, 7); /* Default text color */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for movement and color */
+
+}
+
+.navbar-nav .nav-link:hover {
+  color: rgb(255, 255, 255); /* Change text color on hover */
+  transform: translateY(-5px); /* Move the tab upward */
+}
+
+.logo-img {
+  height: 70px !important; /* Increased logo size */
+  margin-top: 35px;
+  margin-left: 150px;
+}
+
+/* Ensure proper alignment for mobile */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 50px; /* Logo size on mobile */
+  }
+}

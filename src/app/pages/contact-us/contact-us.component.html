@@ -1,0 +1,32 @@
+<div class="container my-5">
+  <div class="row">
+    <!-- Left side content -->
+    <div class="col-md-6 contact-info">
+      <h1 class="mb-4">Contact Us</h1>
+      <p>Email, call, or complete the form to learn how Snappy can solve your messaging problem.</p>
+      <!-- Contact details -->
+      <ul class="list-unstyled mt-4">
+        <li class="mb-3 d-flex align-items-center">
+          <img src="mail-icon.png" alt="Mail Icon" class="me-2" style="width: 24px; height: 24px;">
+          <a href="mailto:admin@gkginfotech.com" class="text-decoration-none">admingkginfotech.com</a>
+        </li>
+        <li class="mb-3 d-flex align-items-center">
+          <img src="phone-icon.png" alt="Phone Icon" class="me-2" style="width: 24px; height: 24px;">
+          74152*****
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right side form -->
+    <div class="col-md-6">
+      
+    </div>
+  </div>
+
+  <!-- Success Popup -->
+  <div *ngIf="isSubmitted" class="popup-message">
+    <div class="popup-content">
+      <p>Thank you! Your message has been submitted successfully.</p>
+    </div>
+  </div>
+</div>

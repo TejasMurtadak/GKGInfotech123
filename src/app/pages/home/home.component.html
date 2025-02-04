@@ -1,0 +1,416 @@
+  <div class="hero-section">
+    <div class="content">
+      <h1>Adapting To Change Without Delay</h1>
+      <p>
+        Innovative Technology, Tailored Solutions <br> Empowering businesses with
+        cutting-edge <br> technology and expert services to drive <br> growth,
+        efficiency, and innovation.
+      </p>
+      <div class="home-component">
+        <!-- Button -->
+        <button (click)="openDialog1()"  class="get-quote-btn">GET QUOTE</button>
+          <!-- Form Popup -->
+          <!-- <div class="popup" *ngIf="isPopupOpen">
+            <div class="popup-content">
+              <span class="close" (click)="closePopup()">&times;</span>
+              <h2 class="text-dark">Let's Work Together</h2>
+              <p class="text-dark">You can reach us anytime</p>
+              <form (ngSubmit)="onSubmit()" #quoteForm="ngForm">
+                <input
+                  type="text"
+                  name="firstName"
+                  [(ngModel)]="formData.firstName"
+                  placeholder="First name"
+                  required
+                  #firstName="ngModel"
+                />
+                <div *ngIf="firstName.invalid && firstName.touched" class="error">
+                  First name is required
+                </div>
+
+                <input
+                  type="text"
+                  name="lastName"
+                  [(ngModel)]="formData.lastName"
+                  placeholder="Last name"
+                  required
+                  #lastName="ngModel"
+                />
+                <div *ngIf="lastName.invalid && lastName.touched" class="error">
+                  Last name is required
+                </div>
+
+                <input
+                  type="email"
+                  name="email"
+                  [(ngModel)]="formData.email"
+                  placeholder="Enter your email"
+                  required
+                  #email="ngModel"
+                />
+                <div *ngIf="email.invalid && email.touched" class="error">
+                  Valid email is required
+                </div>
+
+                <input
+                  type="tel"
+                  name="phone"
+                  [(ngModel)]="formData.phone"
+                  placeholder="Phone number"
+                  required
+                  #phone="ngModel"
+                />
+                <div *ngIf="phone.invalid && phone.touched" class="error">
+                  Phone number is required
+                </div>
+
+                <input
+                  type="text"
+                  name="company"
+                  [(ngModel)]="formData.company"
+                  placeholder="Company Name"
+                  required
+                  #company="ngModel"
+                />
+                <div *ngIf="company.invalid && company.touched" class="error">
+                  Company name is required
+                </div>
+
+                <select
+                  name="department"
+                  [(ngModel)]="formData.department"
+                  required
+                  #department="ngModel"
+                >
+                  <option value="" disabled selected>Choose department</option>
+                  <option value="sales">Sales</option>
+                  <option value="support">Support</option>
+                </select>
+                <div *ngIf="department.invalid && department.touched" class="error">
+                  Department is required
+                </div>
+
+                <select
+                  name="budget"
+                  [(ngModel)]="formData.budget"
+                  required
+                  #budget="ngModel"
+                >
+                  <option value="" disabled selected>Your budget</option>
+                  <option value="low">Below $1,000</option>
+                  <option value="medium">$1,000 - $5,000</option>
+                  <option value="high">Above $5,000</option>
+                </select>
+                <div *ngIf="budget.invalid && budget.touched" class="error">
+                  Budget is required
+                </div>
+
+                <textarea
+                  name="message"
+                  [(ngModel)]="formData.message"
+                  placeholder="How can we help?"
+                  maxlength="250"
+                  required
+                  #message="ngModel"
+                ></textarea>
+                <div *ngIf="message.invalid && message.touched" class="error">
+                  Message is required
+                </div>
+
+                <button type="submit" [disabled]="quoteForm.invalid">Submit</button>
+              </form>
+            </div>
+          </div> -->
+
+      </div>
+
+
+    </div>
+    <div class="image-container">
+      <img
+        src="/gkg_vector new.png"
+        alt="Technology Illustration"
+        class="foreground-image"
+      />
+    </div>
+  </div>
+  <div class="devv">
+    <div class="container">
+      <h2 class="text-center heading-text">Why Choose Us?</h2>
+      <p class="text-center paragraph-text text-muted">
+        Few reasons to choose GKG Information Technology there’s more to it than just Q&A in custom web
+        application development. Here are a few of the  many reasons to choose
+        GKG Information Technology as your development partner.
+      </p>
+      <div class="row text-center mt-4">
+        <div class="col-md-3 col-6" data-aos="fade-left" data-aos-duration="1000">
+          <div class="unique-card">
+            <div class="unique-icon-wrapper">
+              <img src="/work.png" alt="Commitment to Work" class="unique-icon">
+            </div>
+            <h5 class="unique-card-title">Commitment to Work</h5>
+          </div>
+        </div>
+        <div class="col-md-3 col-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+          <div class="unique-card">
+            <div class="unique-icon-wrapper">
+              <img src="/cost.png" alt="Cost Effective" class="unique-icon">
+            </div>
+            <h5 class="unique-card-title">Cost Effective</h5>
+          </div>
+        </div>
+        <div class="col-md-3 col-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+          <div class="unique-card">
+            <div class="unique-icon-wrapper">
+              <img src="/work.png" alt="Solid Team Work" class="unique-icon">
+            </div>
+            <h5 class="unique-card-title">Solid Team Work</h5>
+          </div>
+        </div>
+        <div class="col-md-3 col-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
+          <div class="unique-card">
+            <div class="unique-icon-wrapper">
+              <img src="/standard.png" alt="Standard of Excellence" class="unique-icon">
+            </div>
+            <h5 class="unique-card-title">Standard of Excellence</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+      <div class="image-wrapper">
+        <img src="gd.jpg" alt="Graphic Design" class="background-image">
+        <div class="text-overlay">
+          <h1>Web & Graphics Design</h1>
+          <p>
+            I have successfully delivered numerous projects that combine photo manipulation with UI/UX design for various industries, including e-commerce, corporate branding, and mobile applications. My ability to blend high-quality visuals with an intuitive user experience has resulted in designs that stand out both creatively and functionally.
+          </p>
+          <div class="buttons">
+            <button  class="fw-bold ">Web Design</button>
+            <button class="fw-bold ">Graphics Design</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="digital-marketing-container">
+        <div class="image-text-wrapper">
+          <img
+            src="/dmark.png"
+            alt="Digital Marketing"
+            class="background-img"
+          />
+          <div class="text-left-overlay">
+            <h1>Digital Marketing & SEO Optimization</h1>
+            <p>
+              With our expertise in SEO optimization and digital marketing, we
+              provide comprehensive solutions that enhance online visibility,
+              increase traffic, and maximize conversions. Whether through organic
+              search or paid campaigns, we focus on delivering results that drive
+              long-term business growth.
+            </p>
+
+            <div class="buttons">
+              <button class="fw-bold" mat-button (click)="openModal('Web Design')">Web Design</button>
+              <button class="fw-bold" mat-button (click)="openModal('Graphics Design')">Graphics Design</button>
+            </div>
+
+            <!-- Popup Modal Template -->
+            <ng-template #modalTemplate let-data>
+              <h1 mat-dialog-title>{{ data.title }}</h1>
+              <div mat-dialog-content>
+                <p>This is the content for {{ data.title }}.</p>
+                <p>Scroll down to see more content.</p>
+                <p *ngFor="let i of [].constructor(50); let index = index">Content line {{ index + 1 }}</p>
+              </div>
+              <div mat-dialog-actions>
+                <button mat-button mat-dialog-close>Close</button>
+              </div>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Container -->
+    <div class="new-image-wrapper">
+      <img src="/dev.jpg" alt="Web Development" class="new-background-image">
+      <div class="new-text-overlay">
+        <h1>Web, Mobile & E-commerce</h1>
+        <p>
+          With expertise in web development, mobile development, and e-commerce solutions, I provide end-to-end digital solutions that help businesses scale and succeed in the competitive online landscape. From custom websites to mobile applications and tailored e-commerce platforms, I ensure that each solution is optimized for both performance and user experience.
+        </p>
+        <div class="new-buttons">
+          <button class="fw-bold ">Web Development</button>
+          <button class="fw-bold ">Mobile Development</button>
+          <button class="fw-bold ">E-commerce</button>
+        </div>
+      </div>
+    </div>
+
+
+
+  <div class="tech-proficiency">
+      <h2>Technology Proficiency</h2>
+      <p>We use trending technologies that give unique IT solutions</p>
+
+      <!-- Tab Menu -->
+    <div class="tab-menu">
+    <button
+      *ngFor="let tab of tabs"
+      [class.active]="isTabActive(tab)"
+      (click)="showTechCards(tab)">
+      {{ tab | titlecase }}
+    </button>
+    </div>
+
+  <!-- Technology Cards -->
+  <div *ngIf="isTabActive('front-end')" class="tech-cards front-end">
+    <div class="tech-card">
+      <img src="/js.png" alt="JavaScript">
+      <p>JavaScript</p>
+    </div>
+    <div class="tech-card">
+      <img src="/css.png" alt="CSS">
+      <p>CSS</p>
+    </div>
+    <div class="tech-card">
+      <img src="/ts.png" alt="TypeScript">
+      <p>TypeScript</p>
+    </div>
+    <div class="tech-card">
+      <img src="/angular.png" alt="Angular">
+      <p>Angular</p>
+    </div>
+    <div class="tech-card">
+      <img src="/Bootstrap.png" alt="Bootstrap">
+      <p>Bootstrap</p>
+    </div>
+  </div>
+
+  <div *ngIf="isTabActive('mobile-dev')" class="tech-cards mobile-dev">
+    <div class="tech-card">
+      <img src="/android.png" alt="Flutter">
+      <p>Android</p>
+    </div>
+    <div class="tech-card">
+      <img src="/ionic.png" alt="React Native">
+      <p>Ionic</p>
+    </div>
+    <div class="tech-card">
+      <img src="/ios.png" alt="React Native">
+      <p>IOS</p>
+    </div>
+  </div>
+
+  <div *ngIf="isTabActive('web-dev')" class="tech-cards web-dev">
+    <div class="tech-card">
+      <img src="/springboot.png" alt="Node.js">
+      <p>Spring-boot</p>
+    </div>
+    <div class="tech-card">
+      <img src="/docker.png" alt="Express.js">
+      <p>Docker</p>
+    </div>
+    <div class="tech-card">
+      <img src="/kuber.png" alt="Express.js">
+      <p>Kubernetes</p>
+    </div>
+  </div>
+
+  <div *ngIf="isTabActive('data-warehouse')" class="tech-cards data-warehouse">
+    <div class="tech-card">
+      <img src="/sql.png" alt="SQL">
+      <p>SQL</p>
+    </div>
+    <div class="tech-card">
+      <img src="/mongodb.png" alt="Hadoop">
+      <p>MongoDB</p>
+    </div>
+    <div class="tech-card">
+      <img src="/postgresql.png" alt="Hadoop">
+      <p>PostgreSql</p>
+    </div>
+  </div>
+
+  <div *ngIf="isTabActive('cloud-platform')" class="tech-cards cloud-platform">
+    <div class="tech-card">
+      <img src="/aws.png" alt="AWS">
+      <p>AWS</p>
+    </div>
+    <div class="tech-card">
+      <img src="/azure.png" alt="Azure">
+      <p>Azure</p>
+    </div>
+    <div class="tech-card">
+      <img src="/cloud.png" alt="Azure">
+      <p>Google Cloud</p>
+    </div>
+  </div>
+  </div>
+
+  <div class="tech-proficiency">
+    <h2>Delivering excellence across multiple sectors</h2>
+    <p>Providing innovative solutions, fostering growth, and empowering industries to achieve sustainable <br>
+      success through expertise and tailored strategies.
+    </p>
+  </div>
+
+
+  <div class="homepage-container">
+    <!-- Left Section: Image -->
+    <div class="image-section">
+      <img src="/sector.jpg" alt="Person at computer" class="homepage-image" />
+    </div>
+
+    <div class="categories-section">
+      <div class="category-item">
+        <span class="icon sports-icon"></span> Sports
+      </div>
+      <div class="category-item">
+        <span class="icon real-estate-icon"></span> Real Estate
+      </div>
+      <div class="category-item">
+        <span class="icon food-icon"></span> Food & Beverage
+      </div>
+      <div class="category-item">
+        <span class="icon architecture-icon"></span> Architecture
+      </div>
+      <div class="category-item">
+        <span class="icon tech-icon"></span> Technology & Consultancy
+      </div>
+      <div class="category-item">
+        <span class="icon hospitality-icon"></span> Hospitality & Entertainment
+      </div>
+      <div class="category-item">
+        <span class="icon education-icon"></span> Education & e-Learning
+      </div>
+      <div class="category-item">
+        <span class="icon travel-icon"></span> Travel & Tourism
+      </div>
+      <div class="category-item">
+        <span class="icon ecommerce-icon"></span> Retail & E-commerce
+      </div>
+      <div class="category-item">
+        <span class="icon healthcare-icon"></span> Healthcare
+      </div>
+      <div class="category-item">
+        <span class="icon fashion-icon"></span> Fashion
+      </div>
+      <div class="category-item">
+        <span class="icon finance-icon"></span> Finance & Banking
+      </div>
+      <div class="category-item">
+        <span class="icon pets-icon"></span> Pet & Animals
+      </div>
+      <div class="category-item">
+        <span class="icon automotive-icon"></span> Automotive
+      </div>
+    </div>
+  </div>
+  <div class="tech-proficiency">
+    <h2>Our Client</h2>
+  </div>
+
+
+

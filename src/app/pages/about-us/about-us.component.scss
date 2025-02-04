@@ -1,0 +1,121 @@
+.service-container {
+  min-height: 100vh; /* Full height for the container */
+  padding: 50px 0;
+  background-color: #f5e6ff; /* Light purple background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-text {
+  text-align: left;
+  padding-left: 90px;
+}
+
+.service-text h1 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.service-text p {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.service-image {
+  max-width: 55%;
+  border-radius: 10px;
+}
+.tech-proficiency {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+h2 {
+  padding: 15px 30px; /* Padding inside the box */
+  background-color: #ffffff; /* White background for the box */
+  border-radius: 50px; /* Rounded corners */
+  border: 5px solid #d1c4e9; /* Light purple border */
+  display: inline-block; /* Fit the box tightly around the text */
+  font-size: 2rem; /* Adjust font size */
+  text-align: center; /* Center-align text within the box */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  color: #333; /* Text color */
+}
+.tech-proficiency p
+{
+  font-size: 1.5rem;
+}
+.tech-proficiency {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+.about {
+  padding: 15px 30px; /* Padding inside the box */
+  background-color: #ffffff; /* White background for the box */
+  border-radius: 50px; /* Rounded corners */
+  border: 5px solid #d1c4e9; /* Light purple border */
+  display: inline-block; /* Fit the box tightly around the text */
+  font-size: 2rem; /* Adjust font size */
+  text-align: center; /* Center-align text within the box */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  color: #333; /* Text color */
+}
+.core-values-section {
+  background-color: #2a2a40; /* Matches the background of the text side */
+  color: white;
+  padding: 30px;
+  border-radius: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.core-values-section h2 {
+  color: #ffa500; /* Accent color for the title */
+  margin-bottom: 20px;
+}
+.core-values-list {
+  list-style-type: none;
+  padding: 0;
+}
+.core-values-list li {
+  margin-bottom: 10px;
+}
+.core-values-list li::before {
+  content: "✔"; /* Checkmark for each item */
+  color: #17a2b8; /* Checkmark color */
+  margin-right: 10px;
+}
+.equal-column {
+  height: 100%; /* Ensure equal column height */
+
+}
+.img-fluid{
+  height: 535px;
+
+}
+//
+.dedicated-team-section {
+  background-color: #2a2a40; /* Custom dark background color */
+  color: #ffffff; /* Text color */
+  margin-bottom: 50px;
+}
+.dedicated-team-title {
+  font-size: 1.25rem; /* Adjust the subtitle size */
+  letter-spacing: 2px; /* Add spacing between letters */
+}
+.dedicated-team-heading {
+  font-size: 2.5rem; /* Customize the main heading size */
+  font-weight: bold;
+  color: #f39c12; /* Custom color for the main heading */
+}
+.dedicated-team-text {
+  font-size: 1rem; /* Adjust the paragraph size */
+  line-height: 1.8; /* Improve readability */
+  margin-top: 20px; /* Space between heading and text */
+}

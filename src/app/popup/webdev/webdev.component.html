@@ -1,7 +1,8 @@
-<h2 mat-dialog-title>Web Design</h2>
-<mat-dialog-content class="mat-typography">
-</mat-dialog-content>
-<mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
-</mat-dialog-actions>
+<div class="modal fade show d-block" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content p-3">
+      <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" (click)="closeDialog()"></button>
+      <p class="text-center text-muted" style="font-weight: 500;">Web Design Process</p>
+    </div>
+  </div>  
+</div>

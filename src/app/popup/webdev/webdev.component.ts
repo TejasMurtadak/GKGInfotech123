@@ -9,6 +9,7 @@ import {
 } from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { ContactFormDialogComponent } from '../contact-form-dialog/contact-form-dialog.component';
 
 @Component({
   selector: 'app-webdev',
@@ -24,5 +25,11 @@ import { MatExpansionModule } from '@angular/material/expansion';
   styleUrl: './webdev.component.scss'
 })
 export class WebdevComponent {
+   constructor(
+      public dialogRef: MatDialogRef<ContactFormDialogComponent>
+    ){}
+    closeDialog(): void {
+      this.dialogRef.close();
+    }
 
 }

@@ -21,7 +21,7 @@ export class ContactFormDialogComponent {
     this.contactForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required]],
       phone: ['', Validators.required],
       company: [''],
       department: ['', Validators.required],
@@ -31,13 +31,13 @@ export class ContactFormDialogComponent {
   }
 
   onSubmit() {
-    if (this.contactForm.valid) {
+    // if (this.contactForm.valid) {
       console.log('Form Data:', this.contactForm.value);
       alert('Form submitted successfully!');
       // Here you can send the form data to your backend API
-    } else {
-      alert('Please fill all required fields!');
-    }
+    // } else {
+    //   alert('Please fill all required fields!');
+    // }
   }
 
   closeDialog(): void {

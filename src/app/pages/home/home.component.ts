@@ -95,6 +95,13 @@ export class HomeComponent {
     });
   }
 
+  openDialog2(): void {
+    this.dialog.open(WebdevComponent, {
+      width: '500px',
+      panelClass: 'custom-dialog-container'
+    });
+  }
+
 
 
 }

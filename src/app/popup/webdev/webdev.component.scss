@@ -1,20 +1,30 @@
-.example-accordion {
-  margin: 20px 0;
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  // position: relative;
+  text-align: center;
 }
 
-mat-panel-title b {
-  font-size: 16px;
-}
-
-mat-dialog-content {
-  max-height: 70vh;
-  overflow-y: auto;
-}
-
-h2[mat-dialog-title] img {
+.process-img {
+  width: 100%;
   margin-bottom: 20px;
 }
 
-mat-dialog-actions {
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.work-btn {
   margin-top: 20px;
+  width: 100%;
 }

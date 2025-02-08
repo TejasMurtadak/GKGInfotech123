@@ -1,0 +1,54 @@
+<div class="modal fade show d-block" tabindex="-1">
+<div class="modal-dialog">   
+<div class=" modal-content ">
+    <button class="close-btn" (click)="closeDialog()">✖</button>
+  
+    <h3 class="text-center" style="margin: 29px;">Graphic Design Process</h3>
+  
+    <img src="/items.png" class="process-img" alt="Web Design Process" style="margin-bottom: 29px;">
+  
+    <mat-accordion>
+      <mat-expansion-panel expanded>
+        <mat-expansion-panel-header>
+          <mat-panel-title>1. Clinet Brief:</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p style="font-size: 10px;">The target audience for this project includes [details about the audience, e.g., demographic information like age,
+             gender, location, interests, behaviors, etc.]. The design, content, and overall strategy will be tailored to meet the
+              needs and preferences of this audience.</p>
+       </mat-expansion-panel>
+  
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>2. Research & Inspiration:</mat-panel-title>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+  
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>3. Concept Development:</mat-panel-title>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+  
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>4. Design Execution:</mat-panel-title>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+  
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>5. Client Feedback:</mat-panel-title>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+  
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>6. Final Refinements:</mat-panel-title>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+    </mat-accordion>
+  
+    <button mat-raised-button color="primary" class="work-btn" (click)="openDialog1()">Let's Work Together</button>
+  </div>
+</div>
+</div>

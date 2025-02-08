@@ -1,8 +1,53 @@
 <div class="modal fade show d-block" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content p-3">
-      <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" (click)="closeDialog()"></button>
-      <p class="text-center text-muted" style="font-weight: 500;">Web Design Process</p>
-    </div>
-  </div>  
+  <div class="modal-dialog">   
+<div class="modal-content">
+  <button class="close-btn" (click)="closeDialog()">✖</button>
+  
+    <h3 class="text-center" style="margin: 29px;">Web Design Process</h3>
+  
+    <img src="/web designing - visual selection (1) 1.png" class="process-img" alt="Web Design Process" style="margin-bottom: 29px;">
+
+  <mat-accordion>
+    <mat-expansion-panel expanded>
+      <mat-expansion-panel-header>
+        <mat-panel-title>1. Discovery Phase</mat-panel-title>
+      </mat-expansion-panel-header>
+      <p><b>Client Goals & Target Audience:</b> Understanding the client's business needs.</p>
+      <p><b>Competitive Research:</b> Analyzing competitors.</p>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>2. Wireframes & Prototyping</mat-panel-title>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>3. Design & Visual Aesthetics</mat-panel-title>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>4. Responsive Design</mat-panel-title>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>5. User Experience (UX) Design</mat-panel-title>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>6. Development Collaboration</mat-panel-title>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <button mat-raised-button color="primary" class="work-btn">Let's Work Together</button>
+</div>
+</div>
 </div>

@@ -7,6 +7,7 @@ import {MatDialog,MatDialogModule} from '@angular/material/dialog';
 import{MatButtonModule} from '@angular/material/button';
 import { WebdevComponent } from '../../popup/webdev/webdev.component';
 import { ContactFormDialogComponent } from '../../popup/contact-form-dialog/contact-form-dialog.component';
+import { GaraphicDailogComponent } from '../../popup/garaphic-dailog/garaphic-dailog.component';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -97,6 +98,13 @@ export class HomeComponent {
 
   openDialog2(): void {
     this.dialog.open(WebdevComponent, {
+      width: '400px',
+      panelClass: 'custom-dialog-container'
+    });
+  }
+
+  openDialog3(): void {
+    this.dialog.open(GaraphicDailogComponent, {
       width: '500px',
       panelClass: 'custom-dialog-container'
     });

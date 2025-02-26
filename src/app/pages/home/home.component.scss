@@ -47,13 +47,22 @@
 }
 
 .image-container {
-  max-width: 50%;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  top:230px; /* Start off-screen */
+  right: 170px; /* Start off-screen */
+  animation: slideIn 1.8s ease-out forwards;
 }
 
+@keyframes slideIn {
+  0% {
+      transform: translate(50%, -50%); /* Moves from top-right */
+      opacity: 0;
+  }
+  100% {
+      transform: translate(0, 0); /* Ends in original position */
+      opacity: 1;
+  }
+}
 .foreground-image {
   width: 100%;
   height: auto;
@@ -124,7 +133,6 @@
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
-/* Icon wrapper styling */
 .unique-icon-wrapper {
   display: flex;
   justify-content: center;
@@ -133,7 +141,6 @@
   margin-bottom: 1rem;
 }
 
-/* Icon image styling */
 .unique-icon {
   width: 80px; /* Set a fixed width for the image */
   height: 80px; /* Set a fixed height for the image */
@@ -142,7 +149,6 @@
   padding: 5px; /* Space around the image */
 }
 
-/* Card title styling */
 .unique-card-title {
   font-size: 1.2rem;
   color: #333333; /* Dark text color */
@@ -488,9 +494,10 @@
   flex: 1;
 }
 .homepage-image {
-  width: 100%;
+  width: 400px;
   max-width: 450px;
   border-radius: 8px;
+  height: 450px;
 }
 .categories-section {
 
@@ -616,5 +623,85 @@ form button:hover
   font-size: 0.8rem;
   margin-top: -8px;
   margin-bottom: 8px;
+}
+
+.client-logos {
+  display: flex; /* Keep all items in one line */
+  justify-content: center; /* Center logos horizontally */
+  gap: 20px; /* Add space between logos */
+  padding: 20px 0;
+}
+
+.logo-box
+{
+  background: white; /* Background color */
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 8px; /* Rounded corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px; /* Fixed height */
+  min-width: 150px; /* Ensures equal width */
+}
+
+.logo-box img
+{
+  height: 40px; /* Adjust logo size */
+  max-width: 100%;
+}
+
+
+
+.clients-section {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: #fff;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.logos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  width: 70%; /* Centering effect with space on both sides */
+}
+
+.logo-row {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  position: relative;
+}
+
+.logo-track {
+  display: flex;
+  gap: 60px;
+  animation: scroll 10s linear infinite;
+}
+
+
+
+.row-right .logo-track {
+  animation: scroll-right 20s linear infinite;
+}
+
+
+@keyframes scroll-right {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.logo {
+  height: 50px;
+  width: auto;
 }
 

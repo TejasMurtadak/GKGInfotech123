@@ -7,121 +7,8 @@
         efficiency, and innovation.
       </p>
       <div class="home-component">
-        <!-- Button -->
+
         <button (click)="openDialog1()"  class="get-quote-btn">GET QUOTE</button>
-          <!-- Form Popup -->
-          <!-- <div class="popup" *ngIf="isPopupOpen">
-            <div class="popup-content">
-              <span class="close" (click)="closePopup()">&times;</span>
-              <h2 class="text-dark">Let's Work Together</h2>
-              <p class="text-dark">You can reach us anytime</p>
-              <form (ngSubmit)="onSubmit()" #quoteForm="ngForm">
-                <input
-                  type="text"
-                  name="firstName"
-                  [(ngModel)]="formData.firstName"
-                  placeholder="First name"
-                  required
-                  #firstName="ngModel"
-                />
-                <div *ngIf="firstName.invalid && firstName.touched" class="error">
-                  First name is required
-                </div>
-
-                <input
-                  type="text"
-                  name="lastName"
-                  [(ngModel)]="formData.lastName"
-                  placeholder="Last name"
-                  required
-                  #lastName="ngModel"
-                />
-                <div *ngIf="lastName.invalid && lastName.touched" class="error">
-                  Last name is required
-                </div>
-
-                <input
-                  type="email"
-                  name="email"
-                  [(ngModel)]="formData.email"
-                  placeholder="Enter your email"
-                  required
-                  #email="ngModel"
-                />
-                <div *ngIf="email.invalid && email.touched" class="error">
-                  Valid email is required
-                </div>
-
-                <input
-                  type="tel"
-                  name="phone"
-                  [(ngModel)]="formData.phone"
-                  placeholder="Phone number"
-                  required
-                  #phone="ngModel"
-                />
-                <div *ngIf="phone.invalid && phone.touched" class="error">
-                  Phone number is required
-                </div>
-
-                <input
-                  type="text"
-                  name="company"
-                  [(ngModel)]="formData.company"
-                  placeholder="Company Name"
-                  required
-                  #company="ngModel"
-                />
-                <div *ngIf="company.invalid && company.touched" class="error">
-                  Company name is required
-                </div>
-
-                <select
-                  name="department"
-                  [(ngModel)]="formData.department"
-                  required
-                  #department="ngModel"
-                >
-                  <option value="" disabled selected>Choose department</option>
-                  <option value="sales">Sales</option>
-                  <option value="support">Support</option>
-                </select>
-                <div *ngIf="department.invalid && department.touched" class="error">
-                  Department is required
-                </div>
-
-                <select
-                  name="budget"
-                  [(ngModel)]="formData.budget"
-                  required
-                  #budget="ngModel"
-                >
-                  <option value="" disabled selected>Your budget</option>
-                  <option value="low">Below $1,000</option>
-                  <option value="medium">$1,000 - $5,000</option>
-                  <option value="high">Above $5,000</option>
-                </select>
-                <div *ngIf="budget.invalid && budget.touched" class="error">
-                  Budget is required
-                </div>
-
-                <textarea
-                  name="message"
-                  [(ngModel)]="formData.message"
-                  placeholder="How can we help?"
-                  maxlength="250"
-                  required
-                  #message="ngModel"
-                ></textarea>
-                <div *ngIf="message.invalid && message.touched" class="error">
-                  Message is required
-                </div>
-
-                <button type="submit" [disabled]="quoteForm.invalid">Submit</button>
-              </form>
-            </div>
-          </div> -->
-
       </div>
 
 
@@ -139,11 +26,11 @@
       <h2 class="text-center heading-text">Why Choose Us?</h2>
       <p class="text-center paragraph-text text-muted">
         Few reasons to choose GKG Information Technology there’s more to it than just Q&A in custom web
-        application development. Here are a few of the  many reasons to choose
+        application development. Here are a few of the many reasons to choose
         GKG Information Technology as your development partner.
       </p>
-      <div class="row text-center mt-4">
-        <div class="col-md-3 col-6" data-aos="fade-left" data-aos-duration="1000">
+      <div class="row text-center mt-4"> <!-- Parent container -->
+        <div class="col-md-3 col-6" [@slideInLeft]="cardStates[0]">
           <div class="unique-card">
             <div class="unique-icon-wrapper">
               <img src="/work.png" alt="Commitment to Work" class="unique-icon">
@@ -151,7 +38,7 @@
             <h5 class="unique-card-title">Commitment to Work</h5>
           </div>
         </div>
-        <div class="col-md-3 col-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+        <div class="col-md-3 col-6" [@slideInLeft]="cardStates[1]">
           <div class="unique-card">
             <div class="unique-icon-wrapper">
               <img src="/cost.png" alt="Cost Effective" class="unique-icon">
@@ -159,7 +46,7 @@
             <h5 class="unique-card-title">Cost Effective</h5>
           </div>
         </div>
-        <div class="col-md-3 col-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+        <div class="col-md-3 col-6" [@slideInLeft]="cardStates[2]">
           <div class="unique-card">
             <div class="unique-icon-wrapper">
               <img src="/work.png" alt="Solid Team Work" class="unique-icon">
@@ -167,7 +54,7 @@
             <h5 class="unique-card-title">Solid Team Work</h5>
           </div>
         </div>
-        <div class="col-md-3 col-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
+        <div class="col-md-3 col-6" [@slideInLeft]="cardStates[3]">
           <div class="unique-card">
             <div class="unique-icon-wrapper">
               <img src="/standard.png" alt="Standard of Excellence" class="unique-icon">
@@ -177,6 +64,7 @@
         </div>
       </div>
     </div>
+
   </div>
 
 
@@ -188,8 +76,8 @@
             I have successfully delivered numerous projects that combine photo manipulation with UI/UX design for various industries, including e-commerce, corporate branding, and mobile applications. My ability to blend high-quality visuals with an intuitive user experience has resulted in designs that stand out both creatively and functionally.
           </p>
           <div class="buttons">
-            <button  class="fw-bold " (click)="openDialog2()">Web Design</button>
-            <button class="fw-bold "(click)="openDialog3()" >Graphics Design</button>
+            <button  class="fw-bold "mat-button (click)="openDialog2()">Web Design</button>
+            <button class="fw-bold "mat-button (click)="openDialog3()" >Graphics Design</button>
           </div>
         </div>
       </div>
@@ -212,22 +100,12 @@
             </p>
 
             <div class="buttons">
-              <button class="fw-bold" mat-button (click)="openModal('Web Design')">Web Design</button>
-              <button class="fw-bold" mat-button (click)="openModal('Graphics Design')">Graphics Design</button>
+              <button class="fw-bold" mat-button (click)="openDialog4()">Digital Marketing</button>
+              <button class="fw-bold" mat-button (click)="openDialog5()">SEO Optimization</button>
             </div>
 
             <!-- Popup Modal Template -->
-            <ng-template #modalTemplate let-data>
-              <h1 mat-dialog-title>{{ data.title }}</h1>
-              <div mat-dialog-content>
-                <p>This is the content for {{ data.title }}.</p>
-                <p>Scroll down to see more content.</p>
-                <p *ngFor="let i of [].constructor(50); let index = index">Content line {{ index + 1 }}</p>
-              </div>
-              <div mat-dialog-actions>
-                <button mat-button mat-dialog-close>Close</button>
-              </div>
-            </ng-template>
+
           </div>
         </div>
       </div>
@@ -241,9 +119,9 @@
           With expertise in web development, mobile development, and e-commerce solutions, I provide end-to-end digital solutions that help businesses scale and succeed in the competitive online landscape. From custom websites to mobile applications and tailored e-commerce platforms, I ensure that each solution is optimized for both performance and user experience.
         </p>
         <div class="new-buttons">
-          <button class="fw-bold ">Web Development</button>
-          <button class="fw-bold ">Mobile Development</button>
-          <button class="fw-bold ">E-commerce</button>
+          <button class="fw-bold" mat-button (click)="openDialog6()">Web Development</button>
+          <button class="fw-bold" mat-button (click)="openDialog7()">Mobile Development</button>
+          <button class="fw-bold" mat-button (click)="openDialog8()">E-commerce</button>
         </div>
       </div>
     </div>
@@ -411,6 +289,34 @@
   <div class="tech-proficiency">
     <h2>Our Client</h2>
   </div>
+  <!-- our-clients.component.html -->
+<div class="clients-section">
+  <div class="logos-container">
+    <!-- First Row (Left to Right) -->
+    <!-- <div class="logo-row row-left">
+      <div class="logo-track">
+        <div class="logo-wrapper" *ngFor="let logo of logos.concat(logos)">
+          <img [src]="logo" class="logo" alt="Client Logo" />
+        </div>
+      </div>
+    </div> -->
+    <!-- Second Row (Right to Left) -->
+    <div class="logo-row row-right">
+      <div class="logo-track">
+        <div class="logo-wrapper" *ngFor="let logo of logos.concat(logos)">
+          <img [src]="logo" class="logo" alt="Client Logo" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+
+</div>
+
+
+
+
 
 
 

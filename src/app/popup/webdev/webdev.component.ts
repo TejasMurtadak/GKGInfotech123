@@ -24,10 +24,15 @@ import { NgFor, NgIf } from '@angular/common';
 })
 export class WebdevComponent {
    constructor(
-      public dialogRef: MatDialogRef<ContactFormDialogComponent>
+      public dialogRef: MatDialogRef<ContactFormDialogComponent>,private dialog: MatDialog
     ){}
     closeDialog(): void {
       this.dialogRef.close();
     }
-
+    openDialog1(): void {
+      this.dialog.open(ContactFormDialogComponent, {
+        width: '500px',
+        panelClass: 'custom-dialog-container'
+      });
+    }
 }

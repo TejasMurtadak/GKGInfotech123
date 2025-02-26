@@ -1,6 +1,7 @@
 footer {
   border-top: 1px solid #444; /* Optional border at the top of the footer */
   font-size: 20px;
+  background-color: #1a252f;
 }
 
 footer h5 {
@@ -29,4 +30,35 @@ img {
 
 .cont {
   padding-top: 30px;
+}
+.social-icons {
+  display: flex;
+  gap: 40px; /* Increases the space between icons */
+  align-items: center;
+}
+
+.social-icons a {
+  color: #a8b2d1;
+  font-size: 32px; /* Increases icon size */
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #a8b2d1;
+  margin: 0 80px;
+}
+.socicons{
+  background-color: #1a252f;
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }

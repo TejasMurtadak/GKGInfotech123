@@ -1,0 +1,83 @@
+<div class="modal fade show d-block" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content p-3">
+      <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" (click)="closeDialog()"></button>
+      <h3 class="text-center fw-bold">Let's Work Together</h3>
+      <p class="text-center text-muted">You can reach us anytime</p>
+
+      <form  [formGroup]="careerForm" (ngSubmit)="onSubmit()">
+        <div class="row g-2">
+          <!-- First & Last Name -->
+          <div class="col-md-6">
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-person"></i></span>
+              <input type="text" class="form-control" placeholder="First name">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-person"></i></span>
+              <input type="text" class="form-control" placeholder="Last name">
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="col-12">
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+              <input type="email" class="form-control" placeholder="Enter your email">
+            </div>
+          </div>
+
+          <!-- Phone Number -->
+          <div class="col-12">
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+              <input type="text" class="form-control" placeholder="Phone number">
+            </div>
+          </div>
+
+          <!-- Company Name -->
+          <div class="col-12">
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-building"></i></span>
+              <input type="text" class="form-control" placeholder="Company name">
+            </div>
+          </div>
+
+          <!-- Department -->
+          <div class="col-12">
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-briefcase"></i></span>
+              <select class="form-select">
+                <option selected>Choose department</option>
+                <option value="1">Sales</option>
+                <option value="2">Support</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Budget -->
+          
+
+          <!-- Message -->
+          <div class="col-12">
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-chat-dots"></i></span>
+              <textarea class="form-control" placeholder="How can we help?" rows="2"></textarea>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn w-100" style="background-color:  rgb(47, 14, 75); color: white;">Submit</button>
+          </div>
+        </div>
+      </form>
+
+      <p class="text-muted text-center mt-3">
+        By contacting us, you agree to our <strong>Terms of Service</strong> and <strong>Privacy Policy</strong>.
+      </p>
+    </div>
+  </div>
+</div>

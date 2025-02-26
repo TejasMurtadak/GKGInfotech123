@@ -1,32 +1,155 @@
-<div class="container my-5">
-  <div class="row">
-    <!-- Left side content -->
-    <div class="col-md-6 contact-info">
-      <h1 class="mb-4">Contact Us</h1>
-      <p>Email, call, or complete the form to learn how Snappy can solve your messaging problem.</p>
-      <!-- Contact details -->
-      <ul class="list-unstyled mt-4">
-        <li class="mb-3 d-flex align-items-center">
-          <img src="mail-icon.png" alt="Mail Icon" class="me-2" style="width: 24px; height: 24px;">
-          <a href="mailto:admin@gkginfotech.com" class="text-decoration-none">admingkginfotech.com</a>
-        </li>
-        <li class="mb-3 d-flex align-items-center">
-          <img src="phone-icon.png" alt="Phone Icon" class="me-2" style="width: 24px; height: 24px;">
-          74152*****
-        </li>
-      </ul>
-    </div>
+<div class="full-bg">
+  <div class="container  ">
+    <div class="row justify-content-center align-items-center gx-5 gy-4">
+      <!-- Left Side: Text Content -->
+      <div class="col-md-6 text-left">
+        <h1 class="mb-4 h1tag" >Contact Us </h1>
+        <p class="ptag">Whether you have a question, need assistance, or want to discuss how we can help your business grow, our team is here to assist you. We value every inquiry and are committed to providing you with the best possible support. <br>Got a project in mind? Looking for IT solutions tailored to your needs? Let’s connect and explore how <strong>GKG Information Technology</strong>  can add value to your business. <br>Reach out to us via phone, email, or the contact form below, and we'll get back to you as soon as possible. Your success is our priority!
+        </p>
+      </div>
+      <!-- Right Side: Form -->
+      <div class="col-md-5">
+        <div class="card shadow-lg p-4 custom-form-card">
+          <h1>GET IN TOUCH</h1>
+          <p>You can reach us anytime</p>
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="row g-2">
+              <!-- First Name -->
+              <div class="col-md-6">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-person"></i></span>
+                  <input type="text" class="form-control" placeholder="First name" formControlName="firstName">
+                </div>
+                <div *ngIf="contactForm.get('firstName')?.invalid && contactForm.get('firstName')?.touched" class="text-danger">
+                  <small *ngIf="contactForm.get('firstName')?.errors?.['required']">First name is required.</small>
+                  <small *ngIf="contactForm.get('firstName')?.errors?.['minlength']">First name must be at least 2 characters.</small>
+                </div>
+              </div>
 
-    <!-- Right side form -->
-    <div class="col-md-6">
-      
+              <!-- Last Name -->
+              <div class="col-md-6">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-person"></i></span>
+                  <input type="text" class="form-control" placeholder="Last name" formControlName="lastName">
+                </div>
+                <div *ngIf="contactForm.get('lastName')?.invalid && contactForm.get('lastName')?.touched" class="text-danger">
+                  <small *ngIf="contactForm.get('lastName')?.errors?.['required']">Last name is required.</small>
+                  <small *ngIf="contactForm.get('lastName')?.errors?.['minlength']">Last name must be at least 2 characters.</small>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="col-12">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                  <input type="email" class="form-control" placeholder="Enter your email" formControlName="email">
+                </div>
+                <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-danger">
+                  <small *ngIf="contactForm.get('email')?.errors?.['required']">Email is required.</small>
+                  <small *ngIf="contactForm.get('email')?.errors?.['email']">Please enter a valid email.</small>
+                </div>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="col-12">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                  <input type="text" class="form-control" placeholder="Phone number" formControlName="phone">
+                </div>
+                <div *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched" class="text-danger">
+                  <small *ngIf="contactForm.get('phone')?.errors?.['required']">Phone number is required.</small>
+                  <small *ngIf="contactForm.get('phone')?.errors?.['pattern']">Please enter a valid phone number.</small>
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="col-12">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-chat-dots"></i></span>
+                  <textarea class="form-control" placeholder="How can we help?" rows="3" formControlName="message"></textarea>
+                </div>
+                <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-danger">
+                  <small *ngIf="contactForm.get('message')?.errors?.['required']">Message is required.</small>
+                  <small *ngIf="contactForm.get('message')?.errors?.['minlength']">Message must be at least 10 characters.</small>
+                </div>
+              </div>
+
+              <!-- Resume Upload -->
+              <div class="col-12">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-file-earmark-arrow-up"></i></span>
+                  <input type="file" class="form-control" (change)="onFileChange($event)" accept=".pdf,.doc,.docx">
+                </div>
+                <div *ngIf="contactForm.get('resume')?.invalid && contactForm.get('resume')?.touched" class="text-danger">
+                  <small *ngIf="contactForm.get('resume')?.errors?.['required']">Resume is required.</small>
+                  <small *ngIf="contactForm.get('resume')?.errors?.['fileType']">Please upload a valid file (PDF, DOC, DOCX).</small>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="col-12 text-center">
+                <button type="submit" class="btn w-100" [disabled]="contactForm.invalid" style="background-color: rgb(47, 14, 75); color: white;">Submit</button>
+              </div>
+            </div>
+          </form>
+          <p class="text-muted text-center mt-3">
+            By contacting us, you agree to our <strong>Terms of Service</strong> and <strong>Privacy Policy</strong>.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
+</div>
+<div class="container my-5">
+  <div class="row g-4">
+      <!-- Phone Card -->
+      <div class="col-md-4">
+          <div class="contact-card h-100 d-flex flex-column justify-content-between">
+              <div class="contact-icon">
+                  <i class="bi bi-telephone-fill"></i>
+              </div>
+              <h5>Phone</h5>
+              <p>+971 54069369</p>
+          </div>
+      </div>
 
-  <!-- Success Popup -->
-  <div *ngIf="isSubmitted" class="popup-message">
-    <div class="popup-content">
-      <p>Thank you! Your message has been submitted successfully.</p>
+      <!-- Email Card -->
+      <div class="col-md-4">
+          <div class="contact-card h-100 d-flex flex-column justify-content-between">
+              <div class="contact-icon">
+                  <i class="bi bi-envelope-fill"></i>
+              </div>
+              <h5>Email</h5>
+              <p>admingkginfotech.com</p>
+          </div>
+      </div>
+
+      <!-- Address Card -->
+      <div class="col-md-4">
+          <div class="contact-card h-100 d-flex flex-column justify-content-between">
+              <div class="contact-icon">
+                  <i class="bi bi-geo-alt-fill"></i>
+              </div>
+              <h5>Address</h5>
+              <p>1203, Damac XL Business Tower, <br>
+                Business Bay, Marasi Drive,
+                Dubai, UAE.</p>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="container mt-5">
+  <div class="row align-items-center gx-5 gy-4">
+    <!-- Left Side: Google Map -->
+    <div >
+      <iframe
+        class="w-100 map-container"
+        height="300"
+        frameborder="0"
+        style="border: 0; border-radius: 50px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);"
+        allowfullscreen
+        loading="lazy"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.6705992017223!2d55.264890574836784!3d25.18059803237391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69ccf41f2d2f%3A0x8d51c0c8bc568224!2sDAMAC%20XL%20Tower!5e0!3m2!1sen!2sae!4v1738937786039!5m2!1sen!2sae" width="600" height="850" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">      </iframe>
     </div>
   </div>
 </div>

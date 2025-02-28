@@ -1,7 +1,6 @@
-import { Component,ViewChild,TemplateRef,AfterViewInit ,Inject, PLATFORM_ID ,OnDestroy ,ChangeDetectorRef  } from '@angular/core';
+import { Component,ViewChild,TemplateRef, } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { isPlatformBrowser } from '@angular/common';
-import { Router ,NavigationEnd } from '@angular/router';
+import { Router} from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
 import {MatDialog,MatDialogModule} from '@angular/material/dialog';
@@ -15,10 +14,6 @@ import { WebsiteDialogComponent } from '../../popup/website-dialog/website-dialo
 import { MobdevDialogComponent } from '../../popup/mobdev-dialog/mobdev-dialog.component';
 import { EcommerceDialogComponent } from '../../popup/ecommerce-dialog/ecommerce-dialog.component';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { filter } from 'rxjs/operators';
-
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -39,14 +34,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ])
   ]
 })
-export class HomeComponent implements AfterViewInit,OnDestroy {
+export class HomeComponent {
   // Array of tabs
   tabs = ['front-end', 'mobile-dev', 'web-dev', 'data-warehouse', 'cloud-platform'];
 
   // Default active tab
   selectedTab: string = 'front-end';
 
-  constructor(private router: Router,private dialog: MatDialog,@Inject(PLATFORM_ID) private platformId: Object,private cdr: ChangeDetectorRef) {}
+  constructor(private router: Router,private dialog: MatDialog) {}
 
 
   // Action when the "Get Quote" button is clicked
@@ -176,68 +171,10 @@ export class HomeComponent implements AfterViewInit,OnDestroy {
     '/gkdukaan.png',
     '/gkdukaan.png',
     '/gkmusic.png',
-    '/gkdukaan.png','/gkdukaan.png',
+    '/gkdukaan.png',
+    '/gkdukaan.png',
     '/gkdukaan.png',
     '/gkmusic.png',
     '/gkdukaan.png'
   ];
-
-  cardStates = ['hidden', 'hidden', 'hidden', 'hidden']; // Initial state for each card
-  private observer: IntersectionObserver | null = null;
-
-
-
-
-  ngAfterViewInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      this.setupScrollAnimation();
-
-      // Reinitialize the observer when navigating back to the home component
-      this.router.events
-        .pipe(filter(event => event instanceof NavigationEnd))
-        .subscribe(() => {
-          // Reset card states and reinitialize the observer
-          this.cardStates = ['hidden', 'hidden', 'hidden', 'hidden'];
-          this.setupScrollAnimation();
-        });
-    }
-  }
-
-  ngOnDestroy() {
-    // Clean up the observer when the component is destroyed
-    if (this.observer) {
-      this.observer.disconnect();
-    }
-  }
-
-  setupScrollAnimation() {
-    const cardContainer = document.querySelector('.row'); // Observe the parent container
-    if (!cardContainer) {
-      console.error('Card container not found!');
-      return;
-    }
-
-    // Disconnect the existing observer if it exists
-    if (this.observer) {
-      this.observer.disconnect();
-    }
-
-    this.observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          console.log('Section is in view. Animating cards...');
-          this.cardStates = this.cardStates.map(() => 'visible');
-          this.cdr.detectChanges(); // Manually trigger change detection
-        } else {
-          console.log('Section is out of view. Resetting cards...');
-          this.cardStates = this.cardStates.map(() => 'hidden');
-          this.cdr.detectChanges(); // Manually trigger change detection
-        }
-      });
-    }, { threshold: 0.5 }); // Trigger when 50% of the container is visible
-
-    console.log('Observing card container...');
-    this.observer.observe(cardContainer);
-  }
-
 }
